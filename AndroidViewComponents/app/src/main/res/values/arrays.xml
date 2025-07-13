@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="photo_categories">
+        <item>All</item>
+        <item>Nature</item>
+        <item>Urban</item>
+        <item>Portraits</item>
+    </array>
+</resources>

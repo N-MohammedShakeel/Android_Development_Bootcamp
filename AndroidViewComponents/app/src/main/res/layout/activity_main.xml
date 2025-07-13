@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- res/layout/snippet_textview.xml -->
+        <TextView
+            android:id="@+id/gallery_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery_title"
+            android:textSize="22sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_margin="16dp"
+            android:background="@color/background_light"
+            android:autoLink="web"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:lineSpacingExtra="4dp" />
+
+
+        <!-- res/layout/snippet_edittext.xml -->
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_hint"
+            android:inputType="text"
+            android:maxLength="50"
+            android:imeOptions="actionSearch"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/input_background"
+            android:layout_margin="16dp"
+            android:padding="12dp"
+            android:maxLines="1" />
+
+        <!-- res/layout/snippet_button.xml -->
+        <Button
+            android:id="@+id/view_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_photo"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="16dp"
+            android:padding="12dp" />
+
+        <!-- res/layout/snippet_imagebutton.xml -->
+        <ImageButton
+            android:id="@+id/add_photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:scaleType="centerInside"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="16dp"
+            android:padding="12dp" />
+
+        <!-- res/layout/snippet_spinner.xml -->
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/photo_categories"
+            android:prompt="@string/category_prompt"
+            android:background="@drawable/input_background"
+            android:layout_margin="16dp"
+            android:padding="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- res/layout/snippet_togglebutton.xml -->
+            <ToggleButton
+                android:id="@+id/visibility_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="@string/public_text"
+                android:textOff="@string/private_text"
+                android:checked="false"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/rounded_button"
+                android:layout_margin="16dp"
+                android:padding="12dp" />
+
+            <!-- res/layout/snippet_switch.xml -->
+            <Switch
+                android:id="@+id/notification_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notification_text"
+                android:checked="true"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="16dp"
+                android:thumb="@drawable/custom_thumb"
+                android:track="@drawable/custom_track"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- res/layout/snippet_checkbox.xml -->
+            <CheckBox
+                android:id="@+id/favorite_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favorite_text"
+                android:checked="false"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="16dp" />
+            <!-- res/layout/snippet_radiobutton.xml -->
+            <RadioButton
+                android:id="@+id/quality_high1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quality_high_text"
+                android:checked="false"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="16dp" />
+
+        </LinearLayout>
+
+        <!-- res/layout/snippet_radiogroup.xml -->
+        <RadioGroup
+            android:id="@+id/quality_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:checkedButton="@id/quality_medium"
+            android:layout_margin="16dp">
+
+            <RadioButton
+                android:id="@+id/quality_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quality_low_text"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary" />
+
+            <RadioButton
+                android:id="@+id/quality_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quality_medium_text"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary" />
+
+            <RadioButton
+                android:id="@+id/quality_high2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quality_high_text"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary" />
+        </RadioGroup>
+
+        <!-- res/layout/snippet_imageview.xml -->
+        <ImageView
+            android:id="@+id/photo_thumbnail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/photo_placeholder"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_margin="16dp"
+            app:tint="@color/colorPrimary" />
+
+        <ProgressBar
+            android:id="@+id/upload_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="30"
+            android:max="100"
+            android:progressTint="@color/colorAccent"
+            android:layout_margin="16dp" />
+
+        <SeekBar
+            android:id="@+id/brightness_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="50"
+            android:max="100"
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorAccent"
+            android:layout_margin="16dp" />
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

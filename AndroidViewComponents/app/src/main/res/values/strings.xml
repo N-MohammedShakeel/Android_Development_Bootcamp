@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AndroidViewComponents</string>
+    <string name="gallery_title">Photo Gallery: Explore at www.photogallery.com</string>
+    <string name="search_hint">Search photos</string>
+    <string name="view_photo">View Photo</string>
+    <string name="public_text">Public</string>
+    <string name="private_text">Private</string>
+    <string name="notification_text">Notifications</string>
+    <string name="favorite_text">Mark as Favorite</string>
+    <string name="quality_high_text">High Quality</string>
+    <string name="quality_low_text">Low Quality</string>
+    <string name="quality_medium_text">Medium Quality</string>
+    <string name="category_prompt">Select Category</string>
+
+</resources>
